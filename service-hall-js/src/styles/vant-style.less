@@ -1,0 +1,634 @@
+.pima-theme,
+.sh-float-bubble,
+.sh-msg-dialog-wrap {
+  --primary-color: #4d65cb;
+  // --primary-hover-color: fade(#4d65cb, 90);
+  // --primary-disabled-color: #5E6A99;
+  // --primary-text-color: #555;
+  // --primary-background-color: #E6F2FA;
+  // --secondary-text-color: #999;
+  // --secondary-hover-color: #efefef;
+  // --border-color: #efefef;
+  // --blue-color: #365aa4;
+  --green-color: #389b30;
+  // --yellow-color: #f49b00;
+  --red-color: #e84340;
+  // --grey-color: #555;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  font-size: 14px;
+}
+
+.vant-form {
+  margin-bottom: 0.4rem;
+  padding-bottom: 0.82rem;
+
+  .form-block {
+    margin-bottom: 0.08rem;
+    overflow: hidden;
+    border-radius: 0.04rem;
+    background-color: #fff;
+  }
+
+  .vant-field {
+    min-height: 0.53rem;
+    padding: 0.16rem 0.12rem;
+
+    .van-field__label {
+      color: #444;
+      font-weight: 400;
+      font-size: 0.15rem;
+    }
+
+    .van-cell__value {
+      color: #777;
+      font-weight: 500;
+      font-size: 0.15rem;
+      text-align: right;
+
+      .van-field__control {
+        text-align: right;
+
+        &:read-only {
+          color: #222;
+        }
+
+        &:disabled {
+          color: #bababa;
+        }
+      }
+    }
+
+    .van-field__error-message {
+      text-align: right;
+    }
+
+    &::after {
+      right: 0.12rem;
+      left: 0.12rem;
+      border-color: fade(#000, 10);
+    }
+  }
+}
+
+.vant-action-sheet {
+  .van-action-sheet__header {
+    height: 0.62rem;
+    color: #777;
+    font-weight: 300;
+    font-size: 0.16rem;
+    line-height: 0.62rem;
+  }
+
+  .van-action-sheet__content {
+    .van-action-sheet__item {
+      height: 0.54rem;
+      color: #444;
+      font-weight: 400;
+      font-size: 0.16rem;
+      border-top: 0.005rem fade(#000, 10) solid;
+    }
+  }
+
+  .van-action-sheet__gap {
+    height: 0.06rem;
+    background-color: #f4f4f4;
+  }
+
+  .van-action-sheet__cancel {
+    padding: 0.16rem 0 0.36rem;
+    color: #777;
+    font-weight: 300;
+    font-size: 0.16rem;
+  }
+}
+
+.action-block {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.12rem;
+  padding: 0.12rem 0.12rem 0.24rem;
+  background-color: #fff;
+  box-shadow: 0 -0.01rem 0.04rem 0 fade(#000, 5);
+}
+
+.vant-primary-btn.van-button--primary {
+  height: 0.46rem;
+  color: #fff;
+  font-weight: 400;
+  font-size: 0.15rem;
+  border-radius: 0.04rem;
+  background-color: var(--primary-color);
+
+  &.van-button--disabled {
+    background-color: #d9d9d9;
+    border-color: #d9d9d9;
+  }
+}
+
+.vant-default-btn.vant-default-btn {
+  height: 0.46rem;
+  color: #777;
+  font-weight: 400;
+  font-size: 0.15rem;
+  border-radius: 0.04rem;
+  background-color: #fff;
+  border-color: #e6e6e6;
+}
+
+.text-btn {
+  color: var(--primary-color);
+  font-weight: 400;
+  font-size: 0.12rem;
+  text-align: center;
+  line-height: 1.45;
+
+  &.block {
+    display: block;
+    width: 100%;
+  }
+}
+
+.vant-action-sheet-for-action {
+  .van-action-sheet__content {
+    .van-action-sheet__item {
+      height: 0.58rem;
+      padding-top: 0.2rem;
+      color: #444;
+      font-weight: 400;
+      font-size: 0.16rem;
+      
+      :not(:last-child) {
+        border-bottom: 0.005rem fade(#000, 10) solid;
+      }
+    }
+  }
+
+  .van-action-sheet__gap {
+    height: 0.06rem;
+    background-color: #f4f4f4;
+  }
+
+  .van-action-sheet__cancel {
+    padding: 0.16rem 0 0.36rem;
+    color: #777;
+    font-weight: 300;
+    font-size: 0.16rem;
+  }
+}
+
+.sh-vant-loading {
+  margin-top: 40%;
+  text-align: center;
+}
+
+// popup
+.sh-vant-popup-bottom {
+  border-radius: 0.16rem 0.16rem 0 0;
+
+  .van-picker__toolbar {
+    height: 62px;
+    border-bottom: 0.005rem solid fade(#000, 10);
+
+    > button {
+      padding: 0 20px;
+      font-weight: 400;
+      font-size: 0.16rem;
+
+      &.van-picker__cancel {
+        color: #777;
+      }
+
+      &.van-picker__confirm {
+        color: var(--primary-color);
+      }
+    }
+
+    .van-picker__title {
+      color: #777;
+      font-weight: 300;
+      font-size: 0.16rem;
+    }
+  }
+}
+
+.sh-vant-popup-center.van-popup {
+  max-height: 90%;
+  min-width: 81%;
+  max-width: 95%;
+  overflow: auto;
+  padding: 0;
+  border-radius: 0.1rem;
+
+  .header {
+    min-height: 0.72rem;
+    padding: 0.24rem 0;
+    color: #222;
+    font-weight: 500;
+    font-size: 0.18rem;
+    text-align: center;
+    background: linear-gradient(0deg, rgba(247, 248, 255, 0.00) 0%, #E9EBFF 100%);
+  }
+
+  .content {
+    padding: 0 0.2rem 0.24rem;
+  }
+
+  .cont {
+    max-height: calc(90vh - 0.94rem - 0.72rem);
+    overflow: auto;
+    color: #777;
+    font-weight: 400;
+    font-size: 0.13rem;
+    line-height: 1.7;
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 0.09rem;
+    margin-top: 0.24rem;
+
+    > button {
+      flex: 1;
+    }
+  }
+}
+
+// tab
+.van-tabs.sh-vant-tabs {
+  &.van-tabs--line .van-tabs__wrap {
+    height: 0.8rem;
+    background: linear-gradient(311deg, #4060d0 -3.29%, #4d6ef6 51.72%, #4162d3 104.58%);
+
+    .van-tabs__nav {
+      height: 0.56rem;
+      padding: 0 0.16rem;
+      padding-bottom: 0.24rem;
+      background: transparent;
+    
+      .van-tab {
+        color: #fff;
+        font-weight: 400;
+        font-size: 0.16rem;
+
+        &.van-tab--active {
+          font-weight: 600;
+          font-size: 0.18rem;
+        }
+      }
+
+      .van-tabs__line {
+        bottom: 0.34rem;
+        width: 0.16rem;
+        height: 0.03rem;
+        background-color: #fff;
+        border-radius: 0.06rem;
+      }
+    }
+  }
+
+  .van-tabs__content {
+    margin-top: -0.24rem;
+
+    .content-wrap {
+      height: calc(100vh - 0.56rem);
+      overflow: auto;
+      line-height: 1.4;
+      border-top-right-radius: 0.24rem;
+      border-top-left-radius: 0.24rem;
+    }
+  }
+}
+
+.sh-vant-switch {
+  &.van-switch--on {
+    background: var(--primary-color);
+  }
+}
+
+// 列表项样式
+.list-item {
+  margin-bottom: 0.08rem;
+  border-radius: 0.08rem;
+  background-color: #fff;
+
+  .expend-shrink-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.04rem;
+    height: 0.37rem;
+    color: #777;
+    font-weight: 400;
+    font-size: 0.12rem;
+    border-top: 0.005rem solid fade(#000, 7);
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+
+    &.expend {
+      .spirte-bottom-triangle-gray1 {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  
+  .default-btn {
+    height: 0.3rem;
+    min-width: 0.66rem;
+    padding: 0 0.14rem;
+    color: var(--primary-color);
+    font-weight: 400;
+    font-size: 0.13rem;
+    border-color: fade(#4d65cb, 10);
+    border-radius: 0.15rem;
+
+    &.van-button--disabled {
+      color: #bababa;
+      border-color: fade(#777, 10);
+    }
+
+    &.icon-btn {
+      min-width: 0.3rem;
+      width: 0.3rem;
+      padding: 0;
+    }
+  }
+}
+
+// 表单查看
+.sh-form-info-view {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.17rem 0.16rem 0.15rem;
+  border-radius: 0.08rem;
+  background-color: #fff;
+
+  .sh-form-info-view-item {
+    display: flex;
+    align-items: flex-start;
+    font-weight: 400;
+    font-size: 0.15rem;
+    line-height: 1.45;
+  
+    .sh-form-label {
+      min-width: 0.6rem;
+      margin-right: 0.2rem;
+      color: #777;
+    }
+  
+    .sh-form-content {
+      flex: 1;
+  
+      .content {
+        color: #222;
+        font-weight: 500;
+      }
+  
+      .placeholder {
+        color: #bababa;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.sh-van-dropdown-menu {
+  .van-dropdown-menu__bar {
+    background-color: transparent;
+
+    .van-dropdown-menu__title {
+      color: #fff;
+      font-weight: 500;
+      font-size: 0.16rem;
+
+      &::after {
+        border-color: transparent transparent #fff #fff;
+      }
+    }
+  }
+
+  .van-dropdown-item__option {
+    height: 0.58rem;
+    padding: 0;
+    line-height: 0.58rem;
+    color: #444;
+    font-weight: 400;
+    font-size: 0.16rem;
+    text-align: center;
+
+    .van-cell__value {
+      display: none;
+    }
+
+    &.van-dropdown-item__option--active {
+      color: var(--primary-color);
+      background-color: #f7f8ff;
+    }
+
+    &::after {
+      right: 0;
+      left: 0;
+      border-bottom: 0.005rem solid fade(#000, 10);
+    }
+  }
+}
+
+// 提示对话框
+.sh-msg-dialog {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .message {
+    margin-top: 0.24rem;
+    color: #222;
+    font-weight: 500;
+    font-size: 0.18rem;
+    line-height: 1.45;
+  }
+}
+
+.sh-msg-dialog-wrap {
+  border-radius: 0.1rem;
+
+  .van-dialog__message {
+    position: relative;
+    padding: 0.36rem 0.24rem 0.3rem;
+
+    .dialog-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      height: 0.72rem;
+      background: linear-gradient(0deg, rgba(247, 248, 255, 0.00) 0%, #E9EBFF 100%);
+      border-radius: 0.1rem 0.1rem 0 0;
+    }
+  }
+
+  .van-dialog__footer {
+    display: flex;
+    gap: 0.09rem;
+    padding: 0 0.2rem 0.24rem;
+
+    .van-button {
+      height: 0.4rem;
+      background-color: var(--primary-color);
+      border-radius: 0.05rem;
+      color: #fff;
+      font-weight: 400;
+      font-size: 0.14rem;
+      border: 0;
+
+      &.van-dialog__cancel {
+        border: 1px solid #e6e6e6;
+        background-color: #fff;
+        color: #777;
+      }
+    }
+  }
+}
+
+
+// 我已同意复选框样式
+.checkbox-agree {
+  justify-content: center;
+  margin-bottom: 0.12rem;
+
+  .van-checkbox__icon {
+    height: auto;
+  }
+
+  .van-checkbox__icon .van-icon {
+    width: 0.16rem;
+    height: 0.16rem;
+    font-size: 0.14rem;
+    border-radius: 0.03rem;
+  }
+
+  .van-checkbox__icon--checked .van-icon {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+
+  .agree-text {
+    color: #777;
+    font-weight: 300;
+    font-size: 0.12rem;
+
+    .link {
+      color: var(--primary-color);
+      font-weight: 400;
+      cursor: pointer;
+    }
+  }
+}
+
+// 下拉框filed样式
+.sh-select-field.van-cell {
+  padding: 0;
+
+  .van-field__body {
+    height: 0.54rem;
+    padding: 0 0.25rem 0 0.12rem;
+    color: #444;
+    font-weight: 400;
+    font-size: 0.15rem;
+    background-color: #f8f8f8;
+    border-radius: 0.08rem;
+    line-height: 0.54rem;
+  }
+
+  &::after {
+    display: none;
+  }
+
+  .spirte-bottom-triangle-gray1 {
+    transition: all 0.2s ease-in;
+
+    &.rotate {
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.no-padding-field.van-cell {
+  padding: 0;
+}
+
+.sh-vant-radio-group {
+  flex: 1;
+  margin-top: 0.04rem;
+
+  .sh-vant-radio {
+    height: 0.52rem;
+    color: #444;
+    font-weight: 400;
+    font-size: 0.14rem;
+    line-height: 0.52rem;
+    border-bottom: 0.005rem solid fade(#000, 7);
+
+    .van-radio__label {
+      color: #444;
+      font-weight: 400;
+      font-size: 0.14rem;
+    }
+    
+    .van-radio__icon--checked.van-radio__icon--dot {
+      border-color: var(--primary-color);
+
+      .van-radio__icon--dot__icon {
+        background-color: var(--primary-color);
+      }
+    }
+  }
+}
+
+// 登录页表单
+.login-field.van-cell {
+  margin-bottom: 0.12rem;
+  padding: 0;
+
+  .van-cell__value {
+    color: #222;
+    font-weight: 400;
+    font-size: 0.15rem;
+
+    .van-field__control {
+      height: 0.54rem;
+      padding: 0.16rem 0.14rem;
+      background-color: #f8f8f8;
+      border-radius: 0.05rem;
+
+      &::placeholder {
+        color: #bababa;
+      }
+    }
+
+    &:has(.van-field__error-message) .van-field__body .van-field__control {
+      border: 1px solid var(--red-color);
+    }
+
+    .van-field__error-message {
+      color: var(--red-color);
+    }
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+.login-form.has-error {
+  .van-field__control {
+    border: 1px solid var(--red-color);
+  }
+}

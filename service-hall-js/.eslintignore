@@ -1,0 +1,6 @@
+/build/
+/public/
+/dist/
+.eslintrc.js
+postcss.config.js
+*.d.ts
